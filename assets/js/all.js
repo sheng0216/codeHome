@@ -1,3 +1,5 @@
+"use strict";
+
 function initSwiper() {
   var swiper = new Swiper(".learn", {
     slidesPerView: 3,
@@ -8,12 +10,12 @@ function initSwiper() {
       },
       768: {
         slidesPerView: 7,
-        spaceBetween: 16,
-      },
+        spaceBetween: 16
+      }
     },
     autoplay: {
-      delay: 1500,
-    },
+      delay: 1500
+    }
   });
   var swiper = new Swiper(".about", {
     effect: "fade",
@@ -34,12 +36,14 @@ function initSwiper() {
     spaceBetween: 16,
     breakpoints: {
       768: {
-        slidesPerView: 5,
-      },
+        slidesPerView: 5
+      }
     },
     autoplay: {
-      delay: 1500,
-    },
+      delay: 1500
+    }
   });
 }
+
 initSwiper();
+//# sourceMappingURL=all.js.map
