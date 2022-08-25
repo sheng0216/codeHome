@@ -1,0 +1,117 @@
+.element {
+    &-square {
+        width: 10px;
+        height: 10px;
+    }
+
+    &-squareRounded {
+        position: absolute;
+        display: none;
+        width: 32px;
+        height: 32px;
+
+        &-border {
+            border-top: 2px solid $primary;
+            border-left: 2px solid $primary;
+            border-top-left-radius: 10px;
+        }
+
+        &-90 {
+            transform: rotate(90deg);
+        }
+
+        &-180 {
+            transform: rotate(180deg);
+        }
+
+        &-270 {
+            transform: rotate(270deg);
+        }
+    }
+
+    &-border-center {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            bottom: 0;
+            left: 50%;
+            width: 25px;
+            height: 3px;
+            background: $primary;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            bottom: 0;
+            right: 50%;
+            width: 25px;
+            height: 3px;
+            background: $primary;
+        }
+    }
+
+    &-filter {
+        filter: brightness(0.5);
+
+        &:hover {
+            filter: sepia(0);
+        }
+    }
+
+    &-rounded {
+        position: relative;
+
+        >* {
+            color: $gray-900;
+        }
+
+        &:hover {
+            >* {
+                color: #fff;
+            }
+
+            .icon {
+                @include gradient-text(180deg, $primary, $secondary)
+            }
+        }
+
+        &:hover:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            border: 1px solid $primary;
+            border-radius: $border-radius-lg;
+        }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .element {
+        &:hover {
+            .element {
+                &-squareRounded {
+                    display: block;
+                }
+            }
+
+        }
+    }
+}
+
+.gradient {
+    &-1 {
+        @include gradient-bg(104deg, $secondary, $primary);
+    }
+
+    &-2 {
+        @include gradient-bg(107deg, $secondary, $primary);
+    }
+}

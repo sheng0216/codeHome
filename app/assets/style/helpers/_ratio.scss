@@ -1,0 +1,9 @@
+@include media-breakpoint-up(lg) {
+
+    @each $key,
+    $ratio in $aspect-lg-ratios {
+        .ratio-lg-#{$key} {
+            --#{$variable-prefix}aspect-ratio: #{$ratio};
+        }
+    }
+}

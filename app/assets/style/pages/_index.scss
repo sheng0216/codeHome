@@ -1,0 +1,26 @@
+.banner {
+    background: url(../images/bg_home_mobile.jpg) no-repeat;
+    height: 336px;
+    @include bg-size-pos(cover, center);
+
+    @include media-breakpoint-up(lg) {
+        background: url(../images/bg_home.jpg) no-repeat;
+        @include bg-size-pos(cover, center);
+        height: calc(100vh - 76px);
+    }
+}
+
+
+.about-page {
+    width: auto;
+
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        left: 25%;
+    }
+}
+
+.hero {
+    background: url(../images/bg_share.jpg) no-repeat;
+    @include bg-size-pos(cover, center);
+}

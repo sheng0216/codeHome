@@ -1,0 +1,45 @@
+.w-img-1 {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+.w-img-2 {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.top-1 {
+    top: 10px;
+}
+
+.start-1 {
+    left: 40px;
+}
+
+.end-1 {
+    right: 10px;
+}
+
+.end-2 {
+    right: 24px;
+}
+
+@include media-breakpoint-up(md) {
+    .end-md-1 {
+        right: 32px;
+    }
+}
+
+.border-start-botton-none {
+    border-bottom-left-radius: 0px !important;
+}
+
+.gradient {
+    &-1 {
+        @include gradient-bg(104deg, $secondary, $primary);
+    }
+
+    &-2 {
+        @include gradient-bg(107deg, $secondary, $primary);
+    }
+}

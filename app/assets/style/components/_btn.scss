@@ -1,0 +1,22 @@
+.btn-list {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    column-gap: 8px;
+
+    .btn {
+        padding: $spacer;
+    }
+
+    @include media-breakpoint-up(lg) {
+        column-gap: 16px;
+
+        .btn {
+            padding-top: $spacer*1.5;
+            padding-bottom: $spacer*1.5;
+            padding-right: $spacer * 2;
+            padding-left: $spacer * 2;
+        }
+    }
+}

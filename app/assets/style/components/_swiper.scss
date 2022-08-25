@@ -1,0 +1,8 @@
+.swiper-pagination-bullet {
+    background: $primary;
+
+    &-active {
+        width: 16px;
+        border-radius: 16px;
+    }
+}

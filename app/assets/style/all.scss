@@ -1,0 +1,16 @@
+//載入google字型
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+
+@import "../../../node_modules/bootstrap/scss/functions";
+//變數
+@import "./helpers/variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import './helpers/mixin';
+@import './helpers/utilities';
+@import './helpers/ratio';
+@import './base/base';
+@import './components/navbar';
+@import './components/element';
+@import './components/swiper';
+@import './components/utilities';
+@import './pages/index';
